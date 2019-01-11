@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="WebDriverManager Demo" verbose="10" parallel="false" thread-count="1">
+
+    <test name="Open Step2QA in Google Chrome browser.">
+        <classes>
+            <class name="com.step2qa.TestChrome">
+                <methods>
+                    <include name="openStep2QA"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Open Step2QA in Mozilla Firefox browser.">
+        <classes>
+            <class name="com.step2qa.TestFirefox">
+                <methods>
+                    <include name="openStep2QA"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Open Step2QA in Internet Explorer browser.">
+        <classes>
+            <class name="com.step2qa.TestIExplorer">
+                <methods>
+                    <include name="openStep2QA"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
