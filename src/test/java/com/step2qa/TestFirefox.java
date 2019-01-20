@@ -33,7 +33,7 @@ public class TestFirefox {
     }
 
     @Test
-    public void openStep2QA() throws InterruptedException {
+    public void openStep2QA_firefox() throws InterruptedException {
 
         driver.findElement(By.name("q")).sendKeys("Step2QA");
 

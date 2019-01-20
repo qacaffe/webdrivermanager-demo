@@ -34,7 +34,7 @@ public class TestIExplorer {
     }
 
     @Test
-    public void openStep2QA() throws InterruptedException {
+    public void openStep2QA_iExplorer() throws InterruptedException {
 
         driver.findElement(By.name("q")).sendKeys("Step2QA");
 

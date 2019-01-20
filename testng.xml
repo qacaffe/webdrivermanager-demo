@@ -5,7 +5,7 @@
         <classes>
             <class name="com.step2qa.TestChrome">
                 <methods>
-                    <include name="openStep2QA"/>
+                    <include name="openStep2QA_chrome"/>
                 </methods>
             </class>
         </classes>
@@ -15,7 +15,7 @@
         <classes>
             <class name="com.step2qa.TestFirefox">
                 <methods>
-                    <include name="openStep2QA"/>
+                    <include name="openStep2QA_firefox"/>
                 </methods>
             </class>
         </classes>
@@ -25,7 +25,7 @@
         <classes>
             <class name="com.step2qa.TestIExplorer">
                 <methods>
-                    <include name="openStep2QA"/>
+                    <include name="openStep2QA_iExplorer"/>
                 </methods>
             </class>
         </classes>

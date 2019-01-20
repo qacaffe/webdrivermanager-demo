@@ -31,7 +31,7 @@ public class TestChrome {
     }
 
     @Test
-    public void openStep2QA() throws InterruptedException {
+    public void openStep2QA_chrome() throws InterruptedException {
 
         driver.findElement(By.name("q")).sendKeys("Step2QA");
 
