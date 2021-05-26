@@ -1,11 +1,9 @@
-package com.step2qa;
+package com.qacaffe;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -13,8 +11,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 /**
- * @author Rahul R on 1/11/2019
- * @version 1.0.1
+ * @author Rahul R on 1/11/2021
+ * @version 1.1.0
  */
 public class TestIExplorer {
 
@@ -34,22 +32,22 @@ public class TestIExplorer {
     }
 
     @Test
-    public void openStep2QA_iExplorer() throws InterruptedException {
+    public void openQACaffe_iExplorer() throws InterruptedException {
 
-        driver.findElement(By.name("q")).sendKeys("Step2QA");
+        System.err.println("As Microsoft already closed the IE Project, there might be chances the code may fail.");
+
+        driver.findElement(By.name("q")).sendKeys("QACaffe RahulR");
 
         driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 
-        Thread.sleep(5000);
+        Thread.sleep(10000);
 
-        WebElement link = driver.findElement(By.xpath("//*[contains(text(),'Elevate Quality Engineering')]"));
-
-        link.click();
+        driver.findElement(By.xpath("//h3[text()='QACaffe By RahulR']/parent::a")).click();
 
         Thread.sleep(5000);
 
-        Assert.assertEquals(driver.getTitle(), "Step2QA – Elevate Quality Engineering", "Failed to open the clicked site.");
-
+        Assert.assertEquals(driver.getTitle(), "QACaffe By RahulR",
+                "Failed to open the clicked site.");
     }
 
     @AfterTest

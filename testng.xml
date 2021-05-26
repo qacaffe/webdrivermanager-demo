@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="WebDriverManager Demo" verbose="10" parallel="false" thread-count="1">
 
-    <test name="Open Step2QA in Google Chrome browser.">
+    <test name="Open QACaffe in Google Chrome browser.">
         <classes>
-            <class name="com.step2qa.TestChrome">
+            <class name="com.qacaffe.TestChrome">
                 <methods>
-                    <include name="openStep2QA_chrome"/>
+                    <include name="openQACaffe_chrome"/>
                 </methods>
             </class>
         </classes>
     </test>
 
-    <test name="Open Step2QA in Mozilla Firefox browser.">
+    <test name="Open QACaffe in MS Edge browser.">
         <classes>
-            <class name="com.step2qa.TestFirefox">
+            <class name="com.qacaffe.TestEdge">
                 <methods>
-                    <include name="openStep2QA_firefox"/>
+                    <include name="openQACaffe_edge"/>
                 </methods>
             </class>
         </classes>
     </test>
 
-    <test name="Open Step2QA in Internet Explorer browser.">
+    <test name="Open QACaffe in Mozilla Firefox browser.">
         <classes>
-            <class name="com.step2qa.TestIExplorer">
+            <class name="com.qacaffe.TestFirefox">
                 <methods>
-                    <include name="openStep2QA_iExplorer"/>
+                    <include name="openQACaffe_firefox"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Open QACaffe in Internet Explorer browser.">
+        <classes>
+            <class name="com.qacaffe.TestIExplorer">
+                <methods>
+                    <include name="openQACaffe_iExplorer"/>
                 </methods>
             </class>
         </classes>

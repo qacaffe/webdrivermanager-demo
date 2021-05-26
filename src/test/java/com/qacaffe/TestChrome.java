@@ -1,30 +1,28 @@
-package com.step2qa;
+package com.qacaffe;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 /**
- * @author Rahul R on 1/11/2019
- * @version 1.0.1
+ * @author Rahul R on 1/11/2021
+ * @version 1.1.0
  */
-public class TestFirefox {
+public class TestChrome {
 
     private WebDriver driver;
 
     @BeforeTest
     public void setup() {
 
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
@@ -33,21 +31,20 @@ public class TestFirefox {
     }
 
     @Test
-    public void openStep2QA_firefox() throws InterruptedException {
+    public void openQACaffe_chrome() throws InterruptedException {
 
-        driver.findElement(By.name("q")).sendKeys("Step2QA");
+        driver.findElement(By.name("q")).sendKeys("QACaffe RahulR");
 
         driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 
         Thread.sleep(5000);
 
-        WebElement link = driver.findElement(By.xpath("//*[contains(text(),'Elevate Quality Engineering')]"));
-
-        link.click();
+        driver.findElement(By.xpath("//h3[text()='QACaffe By RahulR']")).click();
 
         Thread.sleep(5000);
 
-        Assert.assertEquals(driver.getTitle(), "Step2QA – Elevate Quality Engineering", "Failed to open the clicked site.");
+        Assert.assertEquals(driver.getTitle(), "QACaffe By RahulR",
+                "Failed to open the clicked site.");
 
     }
 
